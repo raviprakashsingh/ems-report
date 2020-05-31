@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ems-report/static/css/main.2f5972b4.chunk.css",
+    "main.js": "/ems-report/static/js/main.563eeb6a.chunk.js",
+    "main.js.map": "/ems-report/static/js/main.563eeb6a.chunk.js.map",
+    "runtime-main.js": "/ems-report/static/js/runtime-main.2ba2e7b3.js",
+    "runtime-main.js.map": "/ems-report/static/js/runtime-main.2ba2e7b3.js.map",
+    "static/js/2.4941df42.chunk.js": "/ems-report/static/js/2.4941df42.chunk.js",
+    "static/js/2.4941df42.chunk.js.map": "/ems-report/static/js/2.4941df42.chunk.js.map",
+    "index.html": "/ems-report/index.html",
+    "precache-manifest.061e23341f0e623f5e36ec6d195f5573.js": "/ems-report/precache-manifest.061e23341f0e623f5e36ec6d195f5573.js",
+    "service-worker.js": "/ems-report/service-worker.js",
+    "static/css/main.2f5972b4.chunk.css.map": "/ems-report/static/css/main.2f5972b4.chunk.css.map",
+    "static/js/2.4941df42.chunk.js.LICENSE.txt": "/ems-report/static/js/2.4941df42.chunk.js.LICENSE.txt",
+    "static/media/power-station.jpg": "/ems-report/static/media/power-station.abf69411.jpg",
+    "static/media/smart-fi.png": "/ems-report/static/media/smart-fi.c74a4a94.png",
+    "static/media/venlite-logo.png": "/ems-report/static/media/venlite-logo.f4ab1678.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ba2e7b3.js",
+    "static/js/2.4941df42.chunk.js",
+    "static/css/main.2f5972b4.chunk.css",
+    "static/js/main.563eeb6a.chunk.js"
+  ]
+}
