@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Menu from './components/layouts/Menu';
+import HistoricalData from './components/reports/HistoricalData';
+import Login from './components/login/Login';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  if (!loggedIn) {
+    return <Login setLoggedIn={setLoggedIn} setUser={setUser} />;
+  }
+  if (user != null) {
+    return (
+      <div>
+        <Menu page={HistoricalData} user={user} />
+      </div>
+    );
+  }
+  return 'loading';
 }
 
 export default App;
