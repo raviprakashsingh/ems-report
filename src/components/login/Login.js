@@ -4,13 +4,7 @@ import SmartFiImage from './../../img/smart-fi.png';
 import VenliteImage from './../../img/venlite-logo.png';
 import axios from 'axios';
 
-import {
-  Typography,
-  Divider,
-  TextField,
-  Button,
-  Grid,
-} from '@material-ui/core';
+import { Divider, TextField, Button, Grid } from '@material-ui/core';
 import Person from '@material-ui/icons/Person';
 import Lock from '@material-ui/icons/Lock';
 
@@ -37,8 +31,8 @@ const style = {
 };
 
 const Login = ({ setLoggedIn, setUser }) => {
-  const [userName, setUserName] = useState('venlite');
-  const [userPassword, setUserPassword] = useState('venlite@2017');
+  const [userName, setUserName] = useState('');
+  const [userPassword, setUserPassword] = useState('');
 
   const login = async (e) => {
     e.preventDefault();
@@ -54,16 +48,18 @@ const Login = ({ setLoggedIn, setUser }) => {
 
   return (
     <div style={sectionStyle}>
-      <img
-        src={VenliteImage}
-        alt='Venlite'
-        style={{
-          position: 'fixed',
-          top: '10px',
-          left: '30px',
-          width: '100px',
-        }}
-      />
+      <a href='http://www.venlite.website/'>
+        <img
+          src={VenliteImage}
+          alt='Venlite'
+          style={{
+            position: 'fixed',
+            top: '10px',
+            left: '30px',
+            width: '100px',
+          }}
+        />
+      </a>
       <div style={style}>
         <div style={{ justifyContent: 'center', display: 'flex' }}>
           <img
@@ -95,6 +91,7 @@ const Login = ({ setLoggedIn, setUser }) => {
               <TextField
                 label='Username'
                 fullWidth={true}
+                required={true}
                 value={userName}
                 onChange={(e) => {
                   setUserName(e.target.value);
@@ -109,12 +106,14 @@ const Login = ({ setLoggedIn, setUser }) => {
             </Grid>
             <Grid item style={{ flexGrow: 1 }}>
               <TextField
-                label='Password '
+                label='Password'
+                type='password'
                 fullWidth={true}
                 value={userPassword}
                 onChange={(e) => {
                   setUserPassword(e.target.value);
                 }}
+                required={true}
                 style={{ marginTop: '10px' }}
               />
             </Grid>
@@ -133,6 +132,9 @@ const Login = ({ setLoggedIn, setUser }) => {
           >
             Login
           </Button>
+          <p style={{ padding: '10px' }}>
+            <small>Forgot Password</small>
+          </p>
         </form>
       </div>
       <footer
